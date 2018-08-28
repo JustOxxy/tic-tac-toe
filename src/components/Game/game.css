@@ -1,0 +1,42 @@
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.btn {
+  flex: 1 1 auto;
+  margin: 5px;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+}
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-gradient {
+  background-image: linear-gradient(
+    to right,
+    #a1c4fd 0%,
+    #c2e9fb 51%,
+    #a1c4fd 100%
+  );
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.status {
+  margin-bottom: 10px;
+}
