@@ -68,8 +68,11 @@ class Game extends React.Component {
     });
 
     let status;
+    let positionOfWin;
+
     if (winner) {
-      status = "Winner: " + winner;
+      status = "Winner: " + winner.winnerName;
+      positionOfWin = winner.positionOfWin;
     } else if (stepsCount === 9) {
       status = "Nobody winner";
     } else {
@@ -78,7 +81,11 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-board">
-          <Board squares={current.squares} onClick={i => this.handleClick(i)} />
+          <Board
+            squares={current.squares}
+            positionOfWin={positionOfWin}
+            onClick={i => this.handleClick(i)}
+          />
         </div>
         <div className="game-info">
           <div>{status}</div>

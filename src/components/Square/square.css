@@ -17,6 +17,10 @@
   outline: none;
 }
 
+.win-square {
+  color: #a1c4fd;
+}
+
 .kbd-navigation .square:focus {
   background: #ddd;
 }

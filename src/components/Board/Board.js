@@ -4,9 +4,16 @@ import Square from "../Square/Square";
 
 class Board extends React.Component {
   renderSquare(i) {
+    let won = false;
+    if (this.props.positionOfWin && this.props.positionOfWin.indexOf(i) >= 0) {
+      // If there is a winning position and positions exist on board
+      won = true;
+    }
     return (
       <Square
+        key={i}
         value={this.props.squares[i]}
+        highlight={won}
         onClick={() => this.props.onClick(i)}
       />
     );
