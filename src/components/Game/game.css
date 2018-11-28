@@ -40,3 +40,15 @@ ul {
 .status {
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 450px) {
+  .game {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .game-info {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
